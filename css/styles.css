@@ -2,6 +2,9 @@
   --colorBrown: #e08b6c;
 }
 
+* {
+  transition: all  0.3s ease-in-out;
+}
 html,
 body {
   padding: 0;
@@ -21,6 +24,7 @@ header {
   height: 80px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .website-header h1 {
@@ -35,6 +39,27 @@ header {
 .social-icons i {
   margin: 0 7px;
   cursor: pointer;
+}
+
+.container-button{
+  width: 100%;
+  margin-top: 10px;
+}
+
+input[type="button"] {
+  background-color: var(--colorBrown);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 80px;
+  float: right; 
+  border-radius: 5px;
+}
+
+input[type="button"]:hover {
+  background-color: #df6b40;
 }
 
 #nav {
@@ -103,8 +128,19 @@ header {
 
 #popular-news {
   display: flex;
-  flex-wrap: wrap;
   margin: 30px 5%;
+}
+
+.lado-esquerdo {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+.lado-direito {
+  float: right;
+  width: 50%;
+  padding: 0 10px;
 }
 
 #popular-news img {
@@ -122,11 +158,11 @@ header {
   background-color: #000000;
 }
 
-#latest h2 {
+#tecnologia h2 {
   background-color: darkred;
 }
 
-#our-picks h2 {
+#politica h2 {
   background-color: darkblue;
 }
 
@@ -151,8 +187,8 @@ header {
   flex: 2;
 }
 
-#latest,
-#our-picks {
+#tecnologia,
+#politica {
   flex: 1;
 }
 
@@ -209,6 +245,17 @@ aside {
   padding: 0 10px;
   margin: 10px 0 0 0;
 }
+
+/* .sport img{
+  width: 50%;
+}
+
+.sport p{
+  font-size: 14px;
+  display: flex;
+  text-align: justify;
+  
+} */
 
 .recent-news {
   display: flex;
@@ -334,38 +381,40 @@ footer > p {
   }
 }
 
-/*#region ============= CARROS ============= */
+/*#region ============= CATEGORIAS ============= */
 .main-container {
-  display: block;
-  width: 65vw;
-  flex-wrap: wrap;
-  justify-content: right;
+  display: flex;
   margin: 0 5%;
 }
 
-.main-container h1 {
+.main-news {
+  float: left;
+  width: 70%;
+}
+
+.main-news h1 {
   display: flex;
   justify-content: center;
   text-align: left;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 800;
   margin: 0;
   padding: 10px 0;
   color: var(--colorBrown);
 }
 
-.main-container img {
+.main-news img {
   display: block;
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  width: 70%;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.main-container p {
+.main-news p {
   display: flex;
   font-size: 20px;
   text-align: justify;
@@ -400,12 +449,12 @@ footer > p {
 }
 
 .next {
-  right: 140px;
+  right: 0px;
   border-radius: 3px 0 0 3px;
 }
 
 .prev {
-  left: 140px;
+  left: 0px;
   border-radius: 0 3px 3px 0;
 }
 
@@ -433,6 +482,21 @@ footer > p {
   transition: background-color 0.6s ease;
 }
 
+.caption-text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 20px 20px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.caption-text:hover{
+  transform: translateY(-5px);
+}
+
 .active,
 .dot:hover {
   background-color: #717171;
@@ -445,10 +509,77 @@ footer > p {
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+      opacity: 0.4;
   }
+
   to {
-    opacity: 1;
+      opacity: 1;
   }
 }
-/*#endregion  */
+
+.other-news {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 30%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-top: 20vh;
+}
+
+.other-news h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  color: var(--colorBrown);
+}
+
+.other-news h3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.other-news1 p {
+  display: flex;
+  font-size: 15px;
+  text-align: justify;
+  align-content: center;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  padding: 4px 10px;
+}
+
+.other-news1 p:hover {
+  color: var(--colorBrown);
+}
+
+.other-news1 {
+  padding: 5px;
+  align-items: center;
+}
+
+/* translate other-news1 up on hover */
+
+.other-news1:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.other-news1 img {
+  float: left;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias do Mundo</title>
+    <link rel="stylesheet" href="../css/conta.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Registar</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nome" id="name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" id="email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" class="password" id="password">
+                        <i class="fa-regular fa-eye-slash eye-icon"></i>
+                        
+                    </div>
+                    <p>Lost password? <a href="#">Click Here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="registarBtn">Registar</button>
+                    <button type="button" id="loginBtn" class="disable">Login</button>
+                </div>
+                <p id="mensagem"></p>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="../js/conta.js"></script>
+    <script src="https://kit.fontawesome.com/3e5b82c141.js" crossorigin="anonymous"></script>
+</body>
+</html>
