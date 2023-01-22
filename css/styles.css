@@ -3,7 +3,7 @@
 }
 
 * {
-  transition: all  0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 html,
 body {
@@ -24,37 +24,43 @@ header {
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
 }
 
 .website-header h1 {
-  margin: auto 0;
+  font-size: 30px;
+  margin: auto;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--colorBrown);
 }
 
 .social-icons {
-  text-align: right;
-  flex-grow: 1;
+  text-align: center;
+  font-size: 30px;
+  margin-right: 5vw;
 }
 
 .social-icons i {
-  margin: 0 7px;
+  margin: 0 10px;
   cursor: pointer;
 }
 
-.container-button{
+.container-button {
   width: 100%;
   margin-top: 10px;
+  margin-right: 3vw;
 }
 
 input[type="button"] {
   background-color: var(--colorBrown);
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 10px;
   border: none;
   cursor: pointer;
-  width: 80px;
-  float: right; 
+  width: auto;
+  float: right;
   border-radius: 5px;
 }
 
@@ -146,12 +152,16 @@ input[type="button"]:hover {
 #popular-news img {
   width: 100%;
   filter: brightness(0.7);
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 #popular-news h2 {
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   color: #fff;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 #featured h2 {
@@ -198,20 +208,32 @@ input[type="button"]:hover {
 
 .news-container:hover > .popular-news-text {
   bottom: 10px;
+  transform: translateX(10px) scale(1.05);
 }
 
 .more-news {
   display: flex;
   flex-wrap: wrap;
-  background-color: #000000;
   justify-content: space-around;
   color: #fff;
   padding: 0 5%;
   text-align: justify;
 }
 
+.more-news h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--colorBrown);
+}
+
 .more-news img {
   width: 100%;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .news-section {
@@ -221,29 +243,41 @@ input[type="button"]:hover {
   justify-content: space-between;
 }
 
-aside {
-  flex-basis: 25%;
-  padding: 10px;
-  border: 1px solid #fff;
-  margin: auto 0;
-  border-radius: 5px;
+.world {
+  float: left;
+  width: 48%;
+  padding: 0 10px;
 }
-
-.world,
 .sport {
-  flex-basis: 45%;
+  float: right;
+  width: 48%;
+  padding: 0 10px;
 }
 
 .world h2 {
   background-color: #b2175b;
-  padding: 0 10px;
+  padding: 10px;
   margin: 10px 0 0 0;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.world p,
+h3 {
+  color: black;
 }
 
 .sport h2 {
   background-color: #3c1b75;
-  padding: 0 10px;
+  padding: 10px;
   margin: 10px 0 0 0;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sport p,
+h3 {
+  color: black;
 }
 
 /* .sport img{
@@ -299,8 +333,11 @@ footer-news {
   color: white;
 }
 
-footer h2 {
+footer-news h2 {
   padding: 10px 0;
+}
+.about h2 {
+  margin-left: 2vw;
 }
 
 .footer-left {
@@ -326,11 +363,6 @@ footer h2 {
 
 .footer-container-news section {
   flex-basis: 30%;
-}
-
-.social-icons-footer {
-  font-size: 37px;
-  padding: 5px;
 }
 
 footer p {
@@ -493,8 +525,8 @@ footer > p {
   font-weight: bold;
 }
 
-.caption-text:hover{
-  transform: translateY(-5px);
+.caption-text:hover {
+  transform: translateY(-5px) scale(1.05) translateX(10px);
 }
 
 .active,
@@ -509,11 +541,11 @@ footer > p {
 
 @keyframes fade {
   from {
-      opacity: 0.4;
+    opacity: 0.4;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
